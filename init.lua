@@ -86,6 +86,17 @@ minetest.register_node("cassettes:cassette_player", {
 			handlers[pos_string] = handle
 
 			meta:set_string("music_name", music_name) -- for LBM
+
+			if minetest.get_modpath("mcla_music_api") then
+
+				mcla_music_api.stop_playback(clicker)
+			
+				minetest.after(240, function()
+					mcla_music_api.next_song(clicker)
+				end)
+		
+			end
+			
 		else
 			local drop_pos = minetest.find_node_near(pos, 1, "air")
 			if not drop_pos then drop_pos = {x = pos.x, y = pos.y + 1, z = pos.z} end
