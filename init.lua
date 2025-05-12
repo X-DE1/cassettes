@@ -2,6 +2,8 @@ local S = minetest.get_translator("cassettes")
 
 local path = minetest.get_modpath("cassettes")
 
+local after = true
+
 cassettes = {}
 cassettes.registered_cassettes = {}
 
@@ -91,9 +93,13 @@ minetest.register_node("cassettes:cassette_player", {
 
 				mcla_music_api.stop_playback(clicker)
 			
-				minetest.after(240, function()
-					mcla_music_api.next_song(clicker)
-				end)
+				if after then
+					after = false
+					minetest.after(240, function()
+						mcla_music_api.next_song(clicker)
+						after = true
+					end)
+				end
 		
 			end
 			
