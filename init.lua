@@ -2,10 +2,9 @@ local S = minetest.get_translator("cassettes")
 
 local path = minetest.get_modpath("cassettes")
 
-local after = true
-
 cassettes = {}
 cassettes.registered_cassettes = {}
+cassettes.after = {}
 
 function cassettes.register_cassette(name, def)
 	def.stack_max = 1
@@ -67,6 +66,7 @@ minetest.register_node("cassettes:cassette_player", {
 	on_rightclick = function(pos, node, clicker, itemstack)
 		local meta = minetest.get_meta(pos)
 		local inv = meta:get_inventory()
+		local name = clicker:get_player_name()
 
 		local pos_string = minetest.pos_to_string(pos)
 
@@ -93,14 +93,14 @@ minetest.register_node("cassettes:cassette_player", {
 
 				mcla_music_api.stop_playback(clicker)
 			
-				if after then
-					after = false
-					minetest.after(240, function()
-						mcla_music_api.next_song(clicker)
-						after = true
-					end)
+				if cassettes.after[name] then
+					cassettes.after[name]:cancel()
 				end
-		
+				
+				cassettes.after[name] = minetest.after(240, function()
+					mcla_music_api.next_song(clicker)
+				end)
+				
 			end
 			
 		else
