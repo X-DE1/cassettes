@@ -150,92 +150,6 @@ minetest.register_craft({
 	}
 })
 
-minetest.register_craftitem("cassettes:blank_cassette", {
-	description = ("Blank Cassette"),
-	inventory_image = "blank_cassette.png",
-})
-
-minetest.register_craft({
-	output = "cassettes:blank_cassette",
-	recipe = {
-		{"default:tin_ingot", "default:tin_ingot", "default:tin_ingot"},
-		{"default:tin_ingot", "default:steel_ingot", "default:tin_ingot"}
-	}
-})
-
-cassettes.register_cassette("cassettes:cont", {
-	description = "EMLYN - Contemplation",
-	inventory_image = "cont.png",
-	music_name = "cont",
-})
-
-minetest.register_craft({
-	output = "cassettes:cont",
-	recipe = {
-		{"", "default:mese_crystal", ""},
-		{"", "cassettes:blank_cassette", ""}
-	}
-})
-
-cassettes.register_cassette("cassettes:insomnolent", {
-	description = "EMLYN - Insomnolent",
-	inventory_image = "insomnolent.png",
-	music_name = "insomnolent",
-})
-
-minetest.register_craft({
-	output = "cassettes:insomnolent",
-	recipe = {
-		{"default:tin_ingot", "default:obsidian_shard", "default:tin_ingot"},
-		{"default:obsidian_shard", "cassettes:blank_cassette", "default:obsidian_shard"}
-	}
-})
-
-cassettes.register_cassette("cassettes:hair", {
-	description = "heliogram - Hair",
-	inventory_image = "hair.png",
-	music_name = "hair",
-})
-
-minetest.register_craft({
-	output = "cassettes:hair",
-	recipe = {
-		{"default:steel_ingot", "default:steel_ingot", "default:steel_ingot"},
-		{"default:steel_ingot", "cassettes:blank_cassette", "default:steel_ingot"},
-		{"default:steel_ingot", "default:steel_ingot", "default:steel_ingot"}
-	}
-})
-
-cassettes.register_cassette("cassettes:m2m", {
-	description = "heliogram - We Are The Ones Who Convert Mind To Matter",
-	inventory_image = "m2m.png",
-	music_name = "m2m",
-})
-
-minetest.register_craft({
-	output = "cassettes:m2m",
-	recipe = {
-		{"", "default:diamond", ""},
-		{"", "cassettes:blank_cassette", ""},
-		{"", "default:mese_crystal", ""}
-	}
-})
-
-cassettes.register_cassette("cassettes:greem", {
-	description = "heliogram - Greem",
-	inventory_image = "greem.png",
-	music_name = "greem",
-})
-
-minetest.register_craft({
-	output = "cassettes:greem",
-	recipe = {
-		{"", "default:gold_ingot", ""},
-		{"", "cassettes:blank_cassette", ""},
-		{"", "default:diamond", ""}
-	}
-})
-
 if minetest.get_modpath("mcla_music_api") then
 
 	minetest.register_on_joinplayer(function(player)
@@ -243,31 +157,6 @@ if minetest.get_modpath("mcla_music_api") then
 			mcla_music_api.set_volume(player, 15)
 		end)
 	end)
-
-	mcla_music_api.register_song({
-		name = "insomnolent",
-		title = "EMLYN - Insomnolent",
-		length = 210,
-	})
-	mcla_music_api.register_song({
-		name = "cont",
-		title = "EMLYN - Contemplation",
-		length = 210,
-	})
-	mcla_music_api.register_song({
-		name = "hair",
-		title = "heliogram - Hair",
-		length = 210,
-	})
-	mcla_music_api.register_song({
-		name = "greem",
-		title = "heliogram - Greem",
-		length = 210,
-	})
-	mcla_music_api.register_song({
-		name = "m2m",
-		title = "heliogram - We Are The Ones Who Convert Mind To Matter",
-		length = 210,
-	})
 end
+
 
