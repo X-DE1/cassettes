@@ -2,7 +2,7 @@
 
 A mod that adds cassettes and a cassette player.
 <br>
-Cassettes was created with code and media from [Jukebox](https://github.com/minetest-mods/jukebox) and [Cassette Mod](https://github.com/ThePamps/opencassettemod)
+Cassettes was created with code from [Jukebox](https://github.com/minetest-mods/jukebox)
 
 ## Installation
 
