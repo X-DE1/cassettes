@@ -7,12 +7,16 @@ cassettes.registered_cassettes = {}
 cassettes.after = {}
 
 function cassettes.register_cassette(name, def)
+	
+	minetest.register_craftitem(name, {
+		description = def.description,
+		inventory_image = "(casette1.png^[colorize:" .. def.color1 .. ")^(casette2.png^[colorize:" .. def.color2 .. ")",
+	})
+	
 	def.stack_max = 1
 	
 	local music_name = def.music_name
 	def.music_name = nil
-
-	minetest.register_craftitem(":" .. name, def)
 
 	cassettes.registered_cassettes[name] = music_name
 end
@@ -158,5 +162,6 @@ if minetest.get_modpath("mcla_music_api") then
 		end)
 	end)
 end
+
 
 
