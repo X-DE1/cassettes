@@ -154,14 +154,77 @@ minetest.register_craft({
 	}
 })
 
+cassettes.register_cassette("cassettes:forest", {
+color1 = "#9AEA02:100",
+color2 = "#BFC4BC:110",
+description = "X-DE - Forest",
+music_name = "forest"
+})
+
+cassettes.register_cassette("cassettes:icesheet", {
+color1 = "#C96AB8:100",
+color2 = "#81C871:100",
+description = "X-DE - Icesheet",
+music_name = "icesheet"
+})
+
+cassettes.register_cassette("cassettes:savanna", {
+color1 = "#730304:100",
+color2 = "#84FEB7:100",
+description = "X-DE - Savanna",
+music_name = "savanna"
+})
+
+cassettes.register_cassette("cassettes:taiga", {
+color1 = "#6A46FC:100",
+color2 = "#46FC69:100",
+description = "X-DE - Taiga",
+music_name = "taiga"
+})
+
+cassettes.register_cassette("cassettes:tundra", {
+color1 = "#FFFFFF:100",
+color2 = "#FFFFFF:100",
+description = "X-DE - Tundra",
+music_name = "tundra"
+})
+
 if minetest.get_modpath("mcla_music_api") then
 
-	minetest.register_on_joinplayer(function(player)
+	minetest.register_on_newplayer(function(player)
 		minetest.after(0.1, function()
-			mcla_music_api.set_volume(player, 15)
+			mcla_music_api.set_volume(player, 40)
 		end)
 	end)
+
+	mcla_music_api.register_song({
+		name = "forest",
+		title = "X-DE - Forest",
+		length = 210,
+	})
+
+	mcla_music_api.register_song({
+		name = "icesheet",
+		title = "X-DE - Icesheet",
+		length = 210,
+	})
+
+	mcla_music_api.register_song({
+		name = "savanna",
+		title = "X-DE - Savanna",
+		length = 210,
+	})
+
+	mcla_music_api.register_song({
+		name = "taiga",
+		title = "X-DE - Taiga",
+		length = 210,
+	})
+
+	mcla_music_api.register_song({
+		name = "tundra",
+		title = "X-DE - Tundra",
+		length = 210,
+	})
+
 end
-
-
-
