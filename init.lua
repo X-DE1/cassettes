@@ -161,11 +161,29 @@ description = "X-DE - Forest",
 music_name = "forest"
 })
 
+minetest.register_craft({
+	output = "cassettes:forest",
+	recipe = {
+		{"default:tin_ingot", "default:coal_lump", "default:tin_ingot"},
+		{"default:coal_lump", "default:copper_ingot", "default:coal_lump"},
+		{"default:tin_ingot", "default:coal_lump", "default:tin_ingot"}
+	}
+})
+
 cassettes.register_cassette("cassettes:icesheet", {
 color1 = "#C96AB8:100",
 color2 = "#81C871:100",
 description = "X-DE - Icesheet",
 music_name = "icesheet"
+})
+
+minetest.register_craft({
+	output = "cassettes:icesheet",
+	recipe = {
+		{"default:bronze_ingot", "default:coal_lump", "default:bronze_ingot"},
+		{"default:coal_lump", "default:copper_ingot", "default:coal_lump"},
+		{"default:bronze_ingot", "default:coal_lump", "default:bronze_ingot"}
+	}
 })
 
 cassettes.register_cassette("cassettes:savanna", {
@@ -175,6 +193,15 @@ description = "X-DE - Savanna",
 music_name = "savanna"
 })
 
+minetest.register_craft({
+	output = "cassettes:savanna",
+	recipe = {
+		{"default:steel_ingot", "default:coal_lump", "default:steel_ingot"},
+		{"default:coal_lump", "default:copper_ingot", "default:coal_lump"},
+		{"default:steel_ingot", "default:coal_lump", "default:steel_ingot"}
+	}
+})
+
 cassettes.register_cassette("cassettes:taiga", {
 color1 = "#6A46FC:100",
 color2 = "#46FC69:100",
@@ -182,11 +209,29 @@ description = "X-DE - Taiga",
 music_name = "taiga"
 })
 
+minetest.register_craft({
+	output = "cassettes:taiga",
+	recipe = {
+		{"default:gold_ingot", "default:coal_lump", "default:gold_ingot"},
+		{"default:coal_lump", "default:copper_ingot", "default:coal_lump"},
+		{"default:gold_ingot", "default:coal_lump", "default:gold_ingot"}
+	}
+})
+
 cassettes.register_cassette("cassettes:tundra", {
 color1 = "#FFFFFF:100",
 color2 = "#FFFFFF:100",
 description = "X-DE - Tundra",
 music_name = "tundra"
+})
+
+minetest.register_craft({
+	output = "cassettes:tundra",
+	recipe = {
+		{"default:diamond", "default:coal_lump", "default:diamond"},
+		{"default:coal_lump", "default:copper_ingot", "default:coal_lump"},
+		{"default:diamond", "default:coal_lump", "default:diamond"}
+	}
 })
 
 if minetest.get_modpath("mcla_music_api") then
@@ -228,3 +273,4 @@ if minetest.get_modpath("mcla_music_api") then
 	})
 
 end
+
