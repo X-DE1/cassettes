@@ -86,7 +86,7 @@ minetest.register_node("cassettes:cassette_player", {
 				pos = pos,
 				gain = 0.5,
 				max_hear_distance = 25,
-				loop = true
+				loop = false
 			})
 
 			handlers[pos_string] = handle
@@ -154,15 +154,15 @@ minetest.register_craft({
 	}
 })
 
-cassettes.register_cassette("cassettes:forest", {
+cassettes.register_cassette("cassettes:Observing_The_Star", {
 color1 = "#9AEA02:100",
 color2 = "#BFC4BC:110",
-description = "X-DE - Forest",
-music_name = "forest"
+description = "yd - Observing The Star",
+music_name = "Observing_The_Star"
 })
 
 minetest.register_craft({
-	output = "cassettes:forest",
+	output = "cassettes:Observing_The_Star",
 	recipe = {
 		{"default:tin_ingot", "default:coal_lump", "default:tin_ingot"},
 		{"default:coal_lump", "default:copper_ingot", "default:coal_lump"},
@@ -170,15 +170,15 @@ minetest.register_craft({
 	}
 })
 
-cassettes.register_cassette("cassettes:icesheet", {
+cassettes.register_cassette("cassettes:Out_There", {
 color1 = "#C96AB8:100",
 color2 = "#81C871:100",
-description = "X-DE - Icesheet",
-music_name = "icesheet"
+description = "yd - Out There",
+music_name = "Out_There"
 })
 
 minetest.register_craft({
-	output = "cassettes:icesheet",
+	output = "cassettes:Out_There",
 	recipe = {
 		{"default:bronze_ingot", "default:coal_lump", "default:bronze_ingot"},
 		{"default:coal_lump", "default:copper_ingot", "default:coal_lump"},
@@ -186,15 +186,15 @@ minetest.register_craft({
 	}
 })
 
-cassettes.register_cassette("cassettes:savanna", {
+cassettes.register_cassette("cassettes:Bleeding_Out", {
 color1 = "#730304:100",
 color2 = "#84FEB7:100",
-description = "X-DE - Savanna",
-music_name = "savanna"
+description = "Brandon Morris - Bleeding Out",
+music_name = "Bleeding_Out"
 })
 
 minetest.register_craft({
-	output = "cassettes:savanna",
+	output = "cassettes:Bleeding_Out",
 	recipe = {
 		{"default:steel_ingot", "default:coal_lump", "default:steel_ingot"},
 		{"default:coal_lump", "default:copper_ingot", "default:coal_lump"},
@@ -202,15 +202,15 @@ minetest.register_craft({
 	}
 })
 
-cassettes.register_cassette("cassettes:taiga", {
+cassettes.register_cassette("cassettes:Eye_of_the_Storm", {
 color1 = "#6A46FC:100",
 color2 = "#46FC69:100",
-description = "X-DE - Taiga",
-music_name = "taiga"
+description = "Joth - Eye of the Storm",
+music_name = "Eye_of_the_Storm"
 })
 
 minetest.register_craft({
-	output = "cassettes:taiga",
+	output = "cassettes:Eye_of_the_Storm",
 	recipe = {
 		{"default:gold_ingot", "default:coal_lump", "default:gold_ingot"},
 		{"default:coal_lump", "default:copper_ingot", "default:coal_lump"},
@@ -218,15 +218,15 @@ minetest.register_craft({
 	}
 })
 
-cassettes.register_cassette("cassettes:tundra", {
+cassettes.register_cassette("cassettes:Next_to_You", {
 color1 = "#FFFFFF:100",
 color2 = "#FFFFFF:100",
-description = "X-DE - Tundra",
-music_name = "tundra"
+description = "Joth - Next to You",
+music_name = "Next_to_You"
 })
 
 minetest.register_craft({
-	output = "cassettes:tundra",
+	output = "cassettes:Next_to_You",
 	recipe = {
 		{"default:diamond", "default:coal_lump", "default:diamond"},
 		{"default:coal_lump", "default:copper_ingot", "default:coal_lump"},
@@ -243,32 +243,32 @@ if minetest.get_modpath("mcla_music_api") then
 	end)
 
 	mcla_music_api.register_song({
-		name = "forest",
-		title = "X-DE - Forest",
+		name = "Next_to_You",
+		title = "Joth - Next to You",
 		length = 210,
 	})
 
 	mcla_music_api.register_song({
-		name = "icesheet",
-		title = "X-DE - Icesheet",
+		name = "Eye_of_the_Storm",
+		title = "Joth - Eye of the Storm",
 		length = 210,
 	})
 
 	mcla_music_api.register_song({
-		name = "savanna",
-		title = "X-DE - Savanna",
+		name = "Bleeding_Out",
+		title = "Brandon Morris - Bleeding Out",
 		length = 210,
 	})
 
 	mcla_music_api.register_song({
-		name = "taiga",
-		title = "X-DE - Taiga",
+		name = "Out_There",
+		title = "yd - Out There",
 		length = 210,
 	})
 
 	mcla_music_api.register_song({
-		name = "tundra",
-		title = "X-DE - Tundra",
+		name = "Observing_The_Star",
+		title = "yd - Observing The Star",
 		length = 210,
 	})
 

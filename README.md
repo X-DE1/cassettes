@@ -2,7 +2,12 @@
 
 A mod that adds cassettes and a cassette player.
 <br>
-Cassettes was created with code from [Jukebox](https://github.com/minetest-mods/jukebox)
+Cassettes was created with code from [Jukebox](https://github.com/minetest-mods/jukebox),
+and music from [Next to you](https://opengameart.org/content/next-to-you),
+[Eye of the Storm](https://opengameart.org/content/eye-of-the-storm),
+[Out There](https://opengameart.org/content/space-music-out-there),
+[Observing The Star](https://opengameart.org/content/another-space-background-track), and
+[Bleeding out](https://opengameart.org/content/bleeding-out)
 
 ## Installation
 
